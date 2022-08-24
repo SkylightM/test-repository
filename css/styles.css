@@ -38,27 +38,18 @@ body {
     padding: 0;
 }
 
-.link:hover {
-    color: var(--brand-color);
-    fill: var(--brand-color);
-}
-
-.link:focus {
-    color: var(--brand-color);
-    fill: var(--brand-color);
-}
-
+.link:hover,
+.link:focus,
 a[href*="tel"]:focus,
-a[href*="mailto"]:focus {
-    color: var(--brand-color);
-}
-
+a[href*="mailto"]:focus,
 a[href*="tel"]:hover,
 a[href*="mailto"]:hover {
     color: var(--brand-color);
     fill: var(--brand-color);
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 button {
     cursor: pointer;
 }
@@ -78,6 +69,7 @@ button {
     color: var(--brand-color);
     font-family: "Raleway", sans-serif;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .logo-span {
@@ -116,6 +108,8 @@ button {
     line-height: 1.14;
     font-weight: 500;
     color: var(--grey-color);
+    fill: #757575;
+    display: flex;
 }
 .header-phone{
     letter-spacing: 2px;
@@ -167,20 +161,16 @@ h1 {
     
 }
 
-.filter-button:hover{
+.filter-button:hover,
+.filter-button:focus{
     background-color: var(--brand-color);
     border-radius: 4px;
      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     color: var(--white-color);
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.filter-button:focus{
-    background-color: var(--brand-color);
-    border-radius: 4px;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    color: var(--white-color);
-}
-
 h3 {
     font-size: 14px;
     line-height: 1.14;
@@ -237,6 +227,9 @@ figure>figcaption>.title {
     line-height: 1.87;
     font-weight: 400;
     color: var(--grey-color);
+    background-color: var(--white-color);
+    position: relative;
+    z-index: 3;
 }
 .container{
     width: 1200px;
@@ -247,7 +240,7 @@ figure>figcaption>.title {
 }
 .header{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding-top: 24px;
     padding-bottom: 25px;
@@ -256,12 +249,15 @@ figure>figcaption>.title {
     display: flex;
     gap: 46px;
     padding-left: 93px;
+    flex-direction: row;
 }
 .contact-header{
-    padding-left: 345px;
+    padding-left: 350px;
+    display: flex;
+   
 }
 .header-mail{
-    padding-right: 50px;
+    padding-right: 30px;
 }
 #main-section{
     padding: 0;
@@ -285,6 +281,9 @@ figure>figcaption>.title {
     justify-content: center;
     align-items: center;
     gap: 30px;
+}
+.lorem-list-element{
+    width: 270px;
 }
 #second-section{
     padding: 0;
@@ -367,16 +366,17 @@ figure>figcaption>.title {
     padding: 20px;   
 }
 .icon-letter{
-    fill: #757575;
     margin-right: 10px;
     
 }
 .icon-phone{
-    fill: #757575;
-    margin-right: 10px;
+    margin-right: 4px;
+    
 }
 .lorem-icons{
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
     padding-bottom: 30px;
 }
@@ -417,6 +417,9 @@ figure>figcaption>.title {
     background-color: var(--brand-color);
     border-radius: 50%;
     cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Our customers section*/
 #customers{
@@ -458,6 +461,9 @@ figure>figcaption>.title {
     fill: var(--brand-color);
     border: 1px solid var(--brand-color);
     cursor: pointer;
+    transition-property: fill, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* End*/
 .main-footer{
@@ -476,7 +482,7 @@ figure>figcaption>.title {
     color: var(--white-color);
     font-size: 14px;
     font-weight: 700;
-    line-height: 1,14;
+    line-height: 1.14;
     padding-bottom: 20px;
 }
 .footer-social-icons{
@@ -502,8 +508,338 @@ figure>figcaption>.title {
 .footer-linkedin-box:hover{
     background-color: var(--brand-color);
     cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .image-portfolio-main:hover{
     border: 1px solid #EEEEEE;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16)
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition-property: box-shadow, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.main-images-title{
+    color: var(--white-color);
+    font-size: 14px;
+    font-weight: 700;
+    background: rgba(47, 48, 58, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+}
+.main-image{
+    position: relative;
+}
+.image-portfolio-main{
+    position: relative;
+    overflow: hidden;
+}
+.overlay-image-portfolio{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition-property: transform, background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    padding-left: 24px;
+    padding-top: 49px;
+    padding-right: 45px;
+    background-color: rgba(33, 150, 243, 0.9);
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.55;
+    z-index: 2;
+}
+.image-portfolio-main:hover .overlay-image-portfolio{
+    transform: translateY(0);
+}
+.active{
+    position: relative;
+}
+.active::after{
+    content: '';
+    position: absolute;
+    background-color: var(--brand-color);
+    left: 0;
+    bottom: -32px;
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+}
+/*Backdrop with modal window*/
+.backdrop{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 528px;
+    min-height: 581px;
+    background-color: var(--white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.close-btn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+/*End Backdrop*/
+/*Newsletter footer*/
+.newsletter-text{
+    color: var(--white-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.17;
+}
+.newsletter-input{
+    width: 358px;
+    background-color: var(--background-black);
+    height: 50px;
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--white-color);
+}
+.nesletter-input::placeholder{
+    color: rgba(255, 255, 255, 0.6);
+}
+.newsletter-label{
+    display: flex;
+    flex-direction: column;
+    padding-top: 72px;
+    gap: 20px;
+    padding-left: 78px;
+}
+.newsletter-form{
+    display: flex;
+}
+.sign-up-button{
+    width: 200px;
+    height: 50px;
+    margin-top: 108px;
+    margin-left: 12px;
+    background-color: var(--brand-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: transparent;
+    color: var(--white-color);
+    font-size: 16p;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+/*Newsletter footer end*/
+/*Backdrop form*/
+.backdrop-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 40px;
+}
+.backdrop-form-btn{
+    background-color: var(--brand-color);
+    color: var(--white-color);
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+}
+.backdrop-form-title{
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    line-height: 1.15;
+    padding-bottom: px;
+}
+.backdrop-form-name,
+.backdrop-form-phone,
+.backdrop-form-email{
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+}
+.backdrop-form-comment{
+    width: 448px;
+    height: 120px;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-top: 12px;
+    padding-left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    line-height: 1.16;
+}
+.backdrop-form-comment::placeholder{
+    color: rgba(117, 117, 117, 0.5);
+}
+.backdrop-form-name:focus-within,
+.backdrop-form-phone:focus-within,
+.backdrop-form-email:focus-within,
+.backdrop-form-comment:focus-within{
+    border: 1px solid #2196F3;
+    outline: none;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-form-label-name,
+.backdrop-form-label-phone,
+.backdrop-form-label-email,
+.backdrop-form-label-comment{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.backdrop-form-label-name:focus-within,
+.backdrop-form-label-phone:focus-within,
+.backdrop-form-label-email:focus-within,
+.backdrop-form-label-comment:focus-within{
+    fill: var(--brand-color);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-person,
+.icon-phone-form,
+.icon-letter-form{
+    position: absolute;
+    display: inline-block;
+    left: 15px;
+    top: 32px;
+}
+.backdrop-form-name-title,
+.backdrop-form-phone-title,
+.backdrop-form-email-title,
+.backdrop-form-comment-title{
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.16;
+    color: #757575;
+}
+.backdrop-form-rules + .backdrop-form-rules-title{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    color: grey;
+}
+/* .backdrop-form-rules + .backdrop-form-rules-title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    margin-left: -28px;
+    top: 16px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid black;
+    background-color: var(--white-color);
+    transition-property: background-color, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-form-rules:checked + .backdrop-form-rules-title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    margin-left: -28px;
+    top: 16px;
+    width: 16px;
+    height: 15px;
+    border: none;
+    background-color: var(--brand-color);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-form-rules:checked+.backdrop-form-rules-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    margin-left: -28px;
+    top: 16px;
+    width: 16px;
+    height: 15px;
+    outline: none;
+} */
+.backdrop-form-rules-title{
+    color: #757575;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 1.71;
+}
+.form-link{
+    color: var(--brand-color);
+}
+.backdrop-form-rules {
+    position: relative;
+    opacity: 0;
+}
+.icon-check {
+    position: absolute;
+    top: 443px;
+    left: 54px;
+    
+}
+.backdrop-form-rules:checked + #icon-check{
+    fill: white;
+    border: 1px solid black;
+    background: var(--brand-color);
+}
+
+/*Backdrop form end*/
