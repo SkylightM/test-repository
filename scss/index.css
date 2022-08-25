@@ -1,3 +1,11 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   width: 1200px;
   margin: auto;
@@ -8,6 +16,29 @@ body {
   color: black;
   margin: 0;
   padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
 }
 
 .main-header--border-line {
@@ -124,7 +155,6 @@ body {
   font-weight: 900;
   color: white;
   text-align: center;
-  padding-bottom: 30px;
 }
 .container-main__button {
   font-size: 16px;
@@ -216,4 +246,40 @@ body {
   line-height: 1.71;
   font-weight: 400;
   color: grey;
+}
+
+.company {
+  padding: 0;
+  padding-bottom: 94px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.company__images {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+.company__image {
+  position: relative;
+}
+.company__title {
+  font-size: 36px;
+  line-height: 1.16;
+  font-weight: 700;
+  color: black;
+  padding-bottom: 50px;
+}
+.company__titles {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  background: rgba(47, 48, 58, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 370px;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
 }
