@@ -1,0 +1,38 @@
+.container-lorem{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.lorem-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    &__icon{
+        width: 270px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F5F4FA;
+        border-radius: 4px;
+    }
+}
+.lorem-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    &__text{
+        font-size: 14px;
+        line-height: 1.14;
+        font-weight: 700;
+        color: black;
+        width: 270px;
+        &--description{
+            font-size: 14px;
+            line-height: 1.71;
+            font-weight: 400;
+            color: grey;
+        }
+    }
+}

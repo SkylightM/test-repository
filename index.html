@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Studio</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="scss/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -56,7 +56,9 @@
             info@devstudio.com</a
           >
 
-          <a href="tel:+48111111111" class="contact-header__link"
+          <a
+            href="tel:+48111111111"
+            class="contact-header__link contact-header__link--spacing"
             ><svg class="contact-header__icon-phone" width="16px" height="16px">
               <use href="icons.svg#icon-phone"></use>
             </svg>
@@ -66,24 +68,20 @@
       </div>
     </header>
     <main>
-      <section class="section" id="main-section">
+      <section>
         <div class="container container-main">
-          <h1 class="container-main-title">
+          <h1 class="container-main__title">
             EFEKTYWNE ROZWIĄZANIA <br />
             DLA WASZEGO BIZNESU
           </h1>
-          <button
-            class="container-main__main-button"
-            type="button"
-            data-modal-open
-          >
+          <button class="container-main__button" type="button" data-modal-open>
             Zamów usługe
           </button>
           <div class="backdrop is-hidden" data-modal>
             <div class="backdrop__modal">
               <button
-                type="backdrop__button"
-                class="close-btn"
+                type="button"
+                class="backdrop__close-btn"
                 data-modal-close
               >
                 X
@@ -148,74 +146,58 @@
           </div>
         </div>
       </section>
-      <section class="section">
+      <section>
         <div class="container container-lorem">
-          <ul class="container-lorem__list lorem-icons">
-            <li class="container-lorem__item">
-              <svg
-                class="container-lorem__icon-antenna"
-                width="70px"
-                height="70px"
-              >
+          <ul class="lorem-icons">
+            <li class="lorem-icons__icon">
+              <svg width="70px" height="70px">
                 <use href="icons.svg#icon-antenna1"></use>
               </svg>
             </li>
-            <li class="container-lorem__item">
-              <svg
-                class="container-lorem__icon-clock"
-                width="70px"
-                height="70px"
-              >
+            <li class="lorem-icons__icon">
+              <svg width="70px" height="70px">
                 <use href="icons.svg#icon-clock1"></use>
               </svg>
             </li>
-            <li class="container-lorem__item">
-              <svg
-                class="container-lorem__icon-diagram"
-                width="70px"
-                height="70px"
-              >
+            <li class="lorem-icons__icon">
+              <svg width="70px" height="70px">
                 <use href="icons.svg#icon-diagram1"></use>
               </svg>
             </li>
-            <li class="container-lorem__item">
-              <svg
-                class="container-lorem__icon-astronaut"
-                width="70px"
-                height="70px"
-              >
+            <li class="lorem-icons__icon">
+              <svg width="70px" height="70px">
                 <use href="icons.svg#icon-astronaut1"></use>
               </svg>
             </li>
           </ul>
-          <ul class="container-lorem__list">
-            <li class="list__text">
+          <ul class="lorem-list">
+            <li class="lorem-list__text">
               <h3>LOREM IPSUM</h3>
-              <p>
+              <p class="lorem-list__text--description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
                 arcu sem. Sed non sodales dui. Interdum et malesuada
               </p>
             </li>
 
-            <li class="list__text">
+            <li class="lorem-list__text">
               <h3>LOREM IPSUM</h3>
-              <p>
+              <p class="lorem-list__text--description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
                 arcu sem. Sed non sodales dui. Interdum et malesuada
               </p>
             </li>
 
-            <li class="list__text">
+            <li class="lorem-list__text">
               <h3>LOREM IPSUM</h3>
-              <p>
+              <p class="lorem-list__text--description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
                 arcu sem. Sed non sodales dui. Interdum et malesuada
               </p>
             </li>
 
-            <li class="list__text">
+            <li class="lorem-list__text">
               <h3>LOREM IPSUM</h3>
-              <p>
+              <p class="lorem-list__text--description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
                 arcu sem. Sed non sodales dui. Interdum et malesuada
               </p>
@@ -223,7 +205,7 @@
           </ul>
         </div>
       </section>
-      <section class="section" id="second-section">
+      <section id="second-section">
         <div class="container container-company">
           <h2>Czym się zajmujemy</h2>
           <ul class="images">
@@ -257,7 +239,7 @@
           </ul>
         </div>
       </section>
-      <section class="section">
+      <section>
         <div class="container team">
           <h2>Nasz zespół</h2>
           <ul class="team__cards">
@@ -472,7 +454,7 @@
           </ul>
         </div>
       </section>
-      <section class="section" id="customers">
+      <section id="customers">
         <div class="container customers">
           <h2>Nasi klienci</h2>
           <ul class="customers__list">
